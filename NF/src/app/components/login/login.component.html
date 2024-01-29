@@ -1,0 +1,103 @@
+<!-- <div class="container vh-100">
+    <div class="row justify-content-center h-100">
+        <div class="card my-auto shadow">
+            <div class="card-body px-5">
+                <div class="text-center">
+                    <fa-icon [icon]="faLock" class="fa-3x"></fa-icon>
+                </div>
+                <div class="text-center">
+                    <h2>Welcome</h2>
+                </div>
+                <p style="color: lightslategray; text-align: center;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please enter your login
+                    details&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group" >
+                        <input type="email" id="email" placeholder="Email" class="form-control"
+                            formControlName="emailId" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.emailId.errors }" id="inputEmail4" />
+                        <div *ngIf="submitted && f.emailId.errors" class="invalid-feedback">
+                            <div *ngIf="f.emailId.errors.required">Email is required</div>
+                            <div *ngIf="f.emailId.errors.emailId">Email must be a valid email address</div>
+                        </div>
+                    </div>
+                    <div class="form-group" class="password-toggle">
+                        <input type="password" type="{{ hide ? 'password' : 'text' }}"  id="password" placeholder="Password" class="form-control"
+                            formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+                            id="inputPassword4">
+                            <button type="button" (click)="togglePassword()">{{ hide ? 'Show' : 'Hide' }}</button>
+            
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="f.password.errors.required">Password is required</div>
+                        </div>
+                    </div><br>
+                    <input type="submit" class="btn btn-primary w-100" value="Login" name="">
+                </form>
+
+            </div>
+            <div class="card-footer text-right">
+                <small><a routerLink="../forgot-password">Forgot Password</a></small>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <small><a routerLink="../registration">Registration New User</a></small>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="container-fluid ps-md-0">
+    <mat-toolbar class="nav">
+        <span>Nifi Payments</span>
+      </mat-toolbar>
+      
+<div class="col-7" style="text-align: center;margin-top: 3%;">
+    <h1>An all-in-one</h1>
+    <h1>Dashboard</h1>
+    <h3>Trusted by over 2500+ Mega Clients</h3>
+     <img class="limg" src="https://img.freepik.com/free-vector/sign-concept-illustration_114360-5425.jpg?w=740&t=st=1705556819~exp=1705557419~hmac=7fcea66b3bb033705b5df1dcfda1c2560c863730f8bfd531b00e1947a583e829"
+        alt=""> 
+    </div>
+    <div class="row g-0">
+        <div class="d-none d-md-flex col-md-4 col-lg-7 bg-image"></div>
+        <div class="col-md-5 card">
+            <div class="login d-flex  py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9 col-lg-8 mx-auto">
+                            <h1 class="login-heading mb-4">Welcome to your Dashboard</h1>
+                            <h4>You can login to track and record every transaction in real time.</h4>
+                            <!-- Sign In Form -->
+                            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                                <div class="form-floatingmb-3">
+                                    <input type="email" class="form-control" id="floatingInput"
+                                        placeholder="name@example.com" formControlName="emailId" class="form-control"
+                                        [ngClass]="{ 'is-invalid': submitted && f.emailId.errors }" id="inputEmail4">
+                                    <div *ngIf="submitted && f.emailId.errors" class="invalid-feedback">
+                                        <div *ngIf="f.emailId.errors.required">Email is required</div>
+                                        <div *ngIf="f.emailId.errors.emailId">Email must be a valid email address</div>
+                                    </div>
+                                    <label for="floatingInput">Email address</label>
+                                </div>
+                                <div class="form-floatingmb-3">
+                                    <input type="password" class="form-control" id="floatingPassword"
+                                        placeholder="Password" formControlName="password" class="form-control"
+                                        [ngClass]="{ 'is-invalid': submitted && f.password.errors }" id="inputPassword4">
+                                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                        <div *ngIf="f.password.errors.required">Password is required</div>
+                                    </div>
+                                    <label for="floatingInput">Password</label>
+                                </div>
+                                <div class="d-grid">
+                                    <button class="btn btn-lg btn-primary" type="submit">Login &nbsp;<i
+                                            class="fa fa-caret-right" style="color:white;"></i></button>
+                                    
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

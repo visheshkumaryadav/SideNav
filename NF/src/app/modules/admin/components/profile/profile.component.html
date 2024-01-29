@@ -1,0 +1,126 @@
+<div class="container">
+    <h2>+ Add Account</h2>
+    <div class="card">
+        <div class="row">
+            <div class="col-3">
+                <ul>
+                    <a (click)="showForm('personal')">
+                        <p>Personal Info</p>
+                    </a><br>
+                    <a  (click)="showForm('business')">
+                        <p>Business Info</p>
+                    </a><br>
+                    <a  (click)="showForm('bank')">
+                        <p>Banking Info</p>
+                    </a><br>
+                    <a>
+                        <p>Pin & Pass</p>
+                    </a><br>
+                    <a (click)="showForm('activity')">
+                        <p>Activity</p>
+                    </a>
+                </ul>
+            </div>
+            <div class="col-9">
+                <div>
+                    <!-- personal-info.component.html -->
+                        <form *ngIf="selectedForm === 'personal'" #personalInfoForm="ngForm" (ngSubmit)="submitPersonalInfo()">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Enter Aadhar No</mat-label>
+                                <input type="number" matInput placeholder="Placeholder">
+                              </mat-form-field>
+                              <mat-form-field appearance="outline">
+                                <mat-label>Enter Pan No</mat-label>
+                                <input type="text" matInput placeholder="Placeholder">
+                              </mat-form-field>
+                              <mat-form-field appearance="outline">
+                                <mat-label>Enter Name</mat-label>
+                                <input type="text" matInput placeholder="Placeholder">
+                              </mat-form-field>
+                              <mat-form-field appearance="outline">
+                                <mat-label>Enter Father Name</mat-label>
+                                <input type="text" matInput placeholder="Placeholder">
+                              </mat-form-field>
+                              <mat-form-field appearance="outline">
+                                <mat-label>Date of Birth</mat-label>
+                                <input  [matDatepicker]="picker" matInput placeholder="DD/MM/YYYY">
+                                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                              </mat-form-field>
+                              <mat-form-field appearance="outline">
+                                <mat-label>Enter Mobile No</mat-label>
+                                <input type="number" matInput placeholder="Placeholder">
+                              </mat-form-field>
+                              <mat-form-field appearance="outline">
+                                <mat-label>Enter Email Id</mat-label>
+                                <input type="email" matInput placeholder="Placeholder">
+                              </mat-form-field>
+                              <mat-form-field appearance="outline">
+                                <mat-label>Enter Address</mat-label>
+                                <input type="text" matInput placeholder="Placeholder">
+                              </mat-form-field>
+                            <br>
+                            <button class="btn btn-primary" type="submit" [disabled]="!personalInfoForm.valid">Update Personal Info</button>
+                        </form>
+                        <!-- Business Info -->
+                         <form *ngIf="selectedForm === 'business'" #businessInfoForm="ngForm" (ngSubmit)="submitBusinessInfo()">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Select Business Type</mat-label>
+                                <mat-select placeholder="Select Business Type" name="businessType" [(ngModel)]="selectedBusinessType" (ngModelChange)="toggleCOIField()">
+                                  <mat-option value="propriotor">Proprietor</mat-option>
+                                  <mat-option value="partnership">Partnership</mat-option>
+                                  <mat-option value="opc">OPC</mat-option>
+                                  <mat-option value="pvtltd">Pvt Ltd/Ltd</mat-option>
+                                  <mat-option value="Ltd">Ltd</mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                              <mat-form-field appearance="outline">
+                                <mat-label>Enter PAN No</mat-label>
+                                <input type="number" matInput placeholder="PAN No" name="panNo">
+                              </mat-form-field>
+                              <mat-form-field appearance="outline">
+                                <mat-label>Enter Name</mat-label>
+                                <input type="text" matInput placeholder="Name" name="name">
+                              </mat-form-field>
+                              <mat-form-field appearance="outline" *ngIf="showCOIField">
+                                <mat-label>Enter Certificate of Incorporation</mat-label>
+                                <input type="text" matInput placeholder="Certificate of Incorporation" name="certificateOfIncorporation">
+                              </mat-form-field>
+                              <mat-form-field appearance="outline">
+                                <mat-label>Enter GST No</mat-label>
+                                <input type="text" matInput placeholder="Placeholder" [disabled]="!isGSTDisabled">
+                              </mat-form-field>                             
+                              <section>
+                                <mat-checkbox class="example-margin" (change)="toggleGST()">Applied For</mat-checkbox>
+                              </section>
+                              <mat-form-field appearance="outline" *ngIf="!isGSTDisabled">
+                                <mat-label>Enter Acknowledgment No</mat-label>
+                                <input type="text" matInput placeholder="Acknowledgment No">
+                              </mat-form-field>
+                            <button class="btn btn-primary" type="submit" [disabled]="!businessInfoForm.valid">Update Business Info</button>
+                        </form>
+                        <!-- Banking Info -->
+                    <form *ngIf="selectedForm === 'bank'" #bankInfoForm="ngForm" (ngSubmit)="submitBankInfo()">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Enter Account No</mat-label>
+                            <input type="number" matInput placeholder="Placeholder">
+                          </mat-form-field>
+                          <mat-form-field appearance="outline">
+                            <mat-label>Enter IFSC Code</mat-label>
+                            <input type="text" matInput placeholder="Placeholder">
+                          </mat-form-field>
+                          <mat-form-field appearance="outline">
+                            <mat-label>Enter Name of bank</mat-label>
+                            <input type="text" matInput placeholder="Placeholder">
+                          </mat-form-field>
+                            <button class="btn btn-primary" type="submit" [disabled]="!bankInfoForm.valid">Update Bank Info</button>
+                        </form>
+                        <!-- Activity Info -->
+                        <form *ngIf="selectedForm === 'activity'" #bankInfoForm="ngForm" (ngSubmit)="submitactivityInfo()">
+                            <h1>Table</h1>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

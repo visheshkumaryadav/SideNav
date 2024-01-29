@@ -1,0 +1,27 @@
+/* Add your custom styling here */
+
+.container {
+    padding: 1%;
+  }
+  
+  .card {
+    padding: 2% 2%;
+  }
+  a{
+    cursor: pointer;
+  }
+  ul{
+    margin-top: 30%;
+  }
+  p:hover{
+    color:rgb(85, 85, 235) ;
+}
+  .AA{
+    padding: 2% 2%;
+  }
+  mat-form-field{
+    width: 90%;
+  }
+  .example-margin {
+    top: -21px;
+  }

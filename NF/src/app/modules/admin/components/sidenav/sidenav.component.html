@@ -1,0 +1,91 @@
+<mat-nav-list>
+    <div class="logo py-4">
+        <img src="./assets/logo.svg" alt="Company Logo" />
+    </div>
+    <mat-divider></mat-divider>
+    <h2 matSubheader class="mt-2" style="color: white; text-align: center;">APPLICATIONS</h2>
+    
+    <a mat-list-item routerLink="/admin/dashboard">
+        <span class="DD">Dashboard</span>
+    </a>
+    <a mat-list-item (click)="toggleSubMenu('tablesSubmenu1')">
+        <span class="DD">My Account</span>
+      </a>
+      <ul [ngClass]="{'collapse': !isSubMenuOpen['tablesSubmenu1'], 'list-unstyled': true}" id="tablesSubmenu1">
+        <span routerLink="/admin/customertable" class="DD"
+              style="margin-left: 17%; cursor: pointer;"> Statement</span>
+      </ul>
+      <ul [ngClass]="{'collapse': !isSubMenuOpen['tablesSubmenu1'], 'list-unstyled': true}" id="tablesSubmenu1">
+        <span routerLink="/admin/" class="DD"
+              style="margin-left: 17%; cursor: pointer;"> deposit</span>
+      </ul>
+      <ul [ngClass]="{'collapse': !isSubMenuOpen['tablesSubmenu1'], 'list-unstyled': true}" id="tablesSubmenu1">
+        <span routerLink="/admin/" class="DD"
+              style="margin-left: 17%; cursor: pointer;"> Resources</span>
+      </ul>
+      <ul [ngClass]="{'collapse': !isSubMenuOpen['tablesSubmenu1'], 'list-unstyled': true}" id="tablesSubmenu1">
+        <span routerLink="/admin/" class="DD"
+              style="margin-left: 17%; cursor: pointer;"> Invoices</span>
+      </ul>
+      <!-- <ul [ngClass]="{'collapse': !isSubMenuOpen['tablesSubmenu1'], 'list-unstyled': true}" id="tablesSubmenu1">
+        <span routerLink="/admin/profile" class="DD"
+              style="margin-left: 17%; cursor: pointer;"> My Profile</span>
+      </ul> -->
+      <a mat-list-item (click)="toggleSubMenu('tablesSubmenu2')">
+        <span class="DD">Payouts</span>
+      </a>
+      <ul [ngClass]="{'collapse': !isSubMenuOpen['tablesSubmenu2'], 'list-unstyled': true}" id="tablesSubmenu2">
+        <span routerLink="/admin/" class="DD"
+              style="margin-left: 17%; cursor: pointer;"> Single Payments</span>
+      </ul>
+      <ul [ngClass]="{'collapse': !isSubMenuOpen['tablesSubmenu2'], 'list-unstyled': true}" id="tablesSubmenu2">
+        <span routerLink="/admin/" class="DD"
+              style="margin-left: 17%; cursor: pointer;">Bulk Payments</span>
+      </ul>
+      <ul [ngClass]="{'collapse': !isSubMenuOpen['tablesSubmenu2'], 'list-unstyled': true}" id="tablesSubmenu2">
+        <span routerLink="/admin/" class="DD"
+              style="margin-left: 17%; cursor: pointer;"> Payments Link</span>
+      </ul>
+      <ul [ngClass]="{'collapse': !isSubMenuOpen['tablesSubmenu2'], 'list-unstyled': true}" id="tablesSubmenu2">
+        <span routerLink="/admin/" class="DD"
+              style="margin-left: 17%; cursor: pointer;">schedule Payments</span>
+      </ul>
+      <a mat-list-item  (click)="toggleSubMenu('tablesSubmenu3')">
+        <span class="DD">Getway Management</span>
+      </a>
+      <ul [ngClass]="{'collapse': !isSubMenuOpen['tablesSubmenu3'], 'list-unstyled': true}" id="tablesSubmenu3">
+        <span routerLink="/admin/" class="DD"
+              style="margin-left: 17%; cursor: pointer;"> Webbook Setup</span>
+      </ul>
+      <ul [ngClass]="{'collapse': !isSubMenuOpen['tablesSubmenu3'], 'list-unstyled': true}" id="tablesSubmenu3">
+        <span routerLink="/admin/" class="DD"
+              style="margin-left: 17%; cursor: pointer;"> Branding</span>
+      </ul>
+      <ul [ngClass]="{'collapse': !isSubMenuOpen['tablesSubmenu3'], 'list-unstyled': true}" id="tablesSubmenu3">
+        <span routerLink="/admin/" class="DD"
+              style="margin-left: 17%; cursor: pointer;"> Charge Model</span>
+      </ul>
+      <ul [ngClass]="{'collapse': !isSubMenuOpen['tablesSubmenu3'], 'list-unstyled': true}" id="tablesSubmenu3">
+        <span routerLink="/admin/customertable" class="DD"
+              style="margin-left: 17%; cursor: pointer;"> Getway Profile</span>
+      </ul>
+      <a mat-list-item routerLinkActive="list-item-active" (click)="toggleSubMenu('tablesSubmenu4')">
+        <span class="DD">My Contact Book</span>
+      </a>
+      <a mat-list-item (click)="toggleSubMenu('tablesSubmenu5')">
+        <span class="DD">Devloper API's</span>
+      </a>
+      <ul [ngClass]="{'collapse': !isSubMenuOpen['tablesSubmenu5'], 'list-unstyled': true}" id="tablesSubmenu5">
+        <span routerLink="/admin/" class="DD"
+              style="margin-left: 17%; cursor: pointer;"> API Manager</span>
+      </ul>
+      <ul [ngClass]="{'collapse': !isSubMenuOpen['tablesSubmenu5'], 'list-unstyled': true}" id="tablesSubmenu5">
+        <span routerLink="/admin/" class="DD"
+              style="margin-left: 17%; cursor: pointer;"> Call Logs</span>
+      </ul>
+      <ul [ngClass]="{'collapse': !isSubMenuOpen['tablesSubmenu5'], 'list-unstyled': true}" id="tablesSubmenu5">
+        <span routerLink="/admin/" class="DD"
+              style="margin-left: 17%; cursor: pointer;"> Documents</span>
+      </ul>
+
+</mat-nav-list>

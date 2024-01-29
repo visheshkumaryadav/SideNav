@@ -1,0 +1,173 @@
+.limg{
+    width: 60%;
+    height: 300%;
+    margin-top: -2%;
+    margin-left: -25%;
+    position: absolute;
+    @media (max-width: 1124px) {
+        display: none;
+    }
+  }
+  .row{
+    @media (max-width: 1124px) {
+        height: 100%;
+        width: 99%;
+         }
+  }
+  /* .qrcode{
+    width: 60%;
+    margin-top: 4%;
+    margin-left: 22%;
+    padding: 5% 8%;
+  } */
+  h6{
+    position: relative;
+    @media (max-width: 324px) {
+        display: flex;
+    }
+  }
+  
+  small{
+    position: relative;
+    margin-left: 42px;
+  @media (max-width: 250px) {
+    display: flex;
+  }
+  
+  }
+  button{
+    margin-top: 5%;
+    margin-left: -2%;
+    width: 100%;
+    font-size: medium;
+    background-color: darkblue;
+  }
+  .A{
+    margin-top: 1%;
+    position: absolute;
+    @media (max-width: 1124px) {
+        width: 27%;
+        margin-top: 12px;
+      } 
+  }
+  .B{
+    margin-left: 1%;
+   margin-top: -0.90%;
+    position: absolute;
+    @media (max-width: 1124px) {
+        margin-top: -12px;
+        margin-left: 37%;
+        width: 27%;
+        
+      }
+       
+  } 
+  input{
+    margin-top: 4%;
+    margin-left: -1%;
+  }
+  .card{
+    margin-top: -12.50%;
+    height: 520px;
+    padding: -30px -30px;
+    @media (max-width: 1124px) {
+      margin-top: 5%;  
+    }
+  }
+  .nav{
+    color: white;
+    height: 100%;
+    background:darkgrey;
+  }
+  
+
+
+/* .container {
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 40px 30px;
+}
+
+.fa-icon {
+    color: #3498db;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+p {
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: #3498db; 
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9; 
+}
+
+.card-footer {
+    background-color: #f9f9f9;
+    padding: 10px 20px;
+    border-top: 1px solid #ccc;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.password-toggle {
+  position: relative;
+}
+
+.password-toggle input {
+  padding-right: 30px;
+}
+
+.password-toggle button {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+} */
